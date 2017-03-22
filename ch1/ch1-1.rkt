@@ -1,4 +1,5 @@
-#lang racket
+#lang sicp
+;; install sicp in package manager
 
 ;; exercise 1.1
 10

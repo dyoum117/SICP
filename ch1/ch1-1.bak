@@ -1,4 +1,5 @@
-#lang racket
+;;#lang racket
+#lang sicp
 
 ;; exercise 1.1
 10
@@ -32,24 +33,26 @@
         ((and (< c a) (< c b)) (+ (* a a) (* b b)))))
 
 ;; exercise 1.4
-
+;; a-plus-abs-b checks first checks if b is a positive number
+;; depending on the value of b, it either provides a + or - operator
+;; + and - operators are primitive procedures that are applied to a and b
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))
 
 ;; exercise 1.5
+;; Seems that (test 0 (p)) will not break from an infinite loop
+;; Struggled with this one, so I had to use some outside resources to understand it
+;;
+;; applicative order: 
+;; normal order: 
+;; reference: 
+(define (p) (p))
+(define (test x y)
+  (if (= x 0)
+      0 y))
 
 ;; exercise 1.6
 
 ;; exercise 1.7
 
 ;; exercise 1.8
-
-;; exercise 1.9
-
-;; exercise 1.10
-
-;; exercise 1.11
-
-;; exercise 1.12
-
-;; exercise 1.13
-
-;; exercise 1.14
